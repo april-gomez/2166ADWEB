@@ -1,0 +1,38 @@
+  <!-- Header-->
+  <header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Our Partners</h1>
+                    <p class="lead fw-normal text-white-50 mb-4">Let us take a look on each of the hirono figurines!</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="join">Become a Sponsor</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://i.ebayimg.com/images/g/gCgAAOSwHWJknA1F/s-l1200.webp" alt="..." /></div>
+        </div>
+    </div>
+  </header>
+  <section>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <br> <br>
+                <h2 class="text-black mt-0">What is Hirono all about</h2>
+                <hr class="divider divider-light" />
+                <p class="text-black-75 mb-4">This page is all about getting into the figurine named Hirono!</p>
+                <p> Although PopMart offer other figurines, this page is solely focused for our boy, Hirono.</p>
+                <p> Want to know a little secret? Click the button below. </p>
+                <hr class="divider divider-light" />
+                <button (click)="toggleText()">
+                    Secret
+                </button>
+                <div *ngIf="showText">
+                    Hirono is actually a complex character!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
