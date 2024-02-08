@@ -1,0 +1,88 @@
+<body>
+<h2> Date Pipe Demo </h2>
+
+  <div>
+    <p class = "red"> <b> date-pipes </b></p>
+    <p> Today's Date: {{presentDate}} </p>
+    <p> Short Date: {{presentDate | date:'shortDate'}} </p>
+    <p> Medium Date: {{presentDate | date:'mediumDate'}} </p>
+    <p> Short and Medium Date: {{presentDate | date:'shortDate' | date:'mediumDate'}}</p>
+  </div>
+
+  <br> 
+
+  <div>
+    <h3> Date with Parameters </h3>
+    <p class = "red"><b> number-format-pipes </b> </p>
+    <p> Formatted Date: {{presentDate | date:'M/dd/yyy'}} </p>
+    <p> Hours and Minutes: {{presentDate | date:'h:mm'}} </p>
+    <p> Hours: {{presentDate | date:'h'}}</p>
+    <p> Minutes: {{presentDate | date:'mm'}}</p>
+  </div>
+
+<h2> Chained Pipe Demo </h2>
+
+  <div> 
+    <p class = "red"> <b> text-format-pipes </b> </p>
+    <p> Full Date using lowercase :- {{presentDate | date:'fullDate' | lowercase}}</p>
+    <p> Full Date with uppercase :- {{presentDate | date:'fullDate' | uppercase}} </p>
+    <p> Medium Date with lowercase :- {{presentDate | date:'mediumDate' | lowercase}}</p>
+    <p> Medium Date using uppercase :- {{presentDate | date:'mediumDate' | uppercase}}</p>
+  </div>
+
+<h2> Built-in Pipes Demo </h2>
+
+  <div> 
+    <h3> AsyncPipe </h3>
+    <p> Seconds changing in Time: {{ time$ | async | date:'shortTime'}} </p>
+    <p> Seconds changing in Time: {{ time$ | async | date:'mediumTime'}} </p>
+    <p> Seconds changing in Time: {{ time$ | async | date:'fullTime'}} </p>
+  </div>
+
+  <br>
+
+  <div> 
+    <h3> CurrencyPipe </h3>
+    <p class = "red"> <b> currency-pipes </b> </p>
+    <p> {{price | currency:'':true }} </p>
+    <p> {{price | currency:'':false }} </p>
+    <p> {{price | currency:'INR'}}</p>
+  </div>
+
+<h2> Slice Pipe </h2>
+    
+  <div>
+    <p class = "red"> <b> slice-pipes </b> </p>
+    <p> Start index:- {{Fruits | slice:2}} </p>
+    <p> Start and end index:- {{Fruits | slice:1:4}} </p>
+    <p> Negative index:- {{Fruits| slice:-2}} </p>
+    <p> Negative start and end index:- {{Fruits | slice:-4:-2}}</p>
+  </div>
+
+<h2> Decimal Pipe </h2>
+
+  <div>
+    <p class = "red"> <b> decimal-pipes </b> </p>
+    <p> {{decimalNum1 | number}} </p>
+    <p> {{decimalNum2 | number}} </p>
+    <p> Apply formatting:- {{decimalNum1 | number:'3.1' }} </p>
+    <p> Apply formatting:- {{decimalNum2 | number:'2.1-4' }} </p>
+  </div>
+
+<h2> JSON Pipe Demo </h2>
+  
+  <div>
+    <p class = "red"> <b> json-pipes </b> </p>
+    <p> {{data | json }} </p>
+    <p> {{data1 | json}}</p>
+    <p> {{data2 | json}}</p>
+  </div>
+
+<h2> Percent Pipe Demo </h2>
+  <div>
+    <p class = "red"> <b> percent-pipes </b> </p>
+    <p> A: {{ a | percent }} </p>
+    <p> B: {{ b | percent}} </p>
+    <p> C: {{ b | percent: '4.3-5'}} </p>
+  </div>
+</body>
