@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <style>
+        .button {
+          background-color: #04AA6D;
+          border: none;
+          color: white;
+          padding: 13px 26px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 10px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        }
+
+        .buttons {
+          background-color: white;
+          color: black;
+          border: 2px solid #555555;
+        }
+
+        .buttons:hover {
+          background-color: #555555;
+          color: white;
+        }
+
+        table, th, td {
+          border:1px solid white;
+          text-align: center;
+          background-color: black;
+          color: white;
+        }
+
+        .myDiv {
+          border: 5px outset black;
+          background-color: lightgray;    
+          text-align: center;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <h1 style = "background-color:black; color:white; text-align:center">Books Application</h1>
+    
+    <div class = "myDiv">
+      <br>
+      <input id="newBook" placeholder="Title of the book"> <br> <br>
+      <input id="newDesc" placeholder="Book Description"> <br> <br>
+      <input id="newPrice" placeholder="Book Price"> <br> <br>
+
+      <button class="button buttons" (click)="addBook()">Add book</button>
+      <br> <br>
+    </div>
+
+    <table style = "width:100%">
+      <tr>
+        <th>Book Title</th>
+        <th>Description</th>
+        <th>Book Price</th>
+        <th></th>
+      </tr>
+
+      <tr *ngFor="let book of books">
+        <td>{{book.title}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.price}}</td>
+        <td><button class="button buttons" (click)="deleteBook(book.id)">Delete book</button></td>
+      </tr>
+      <!-- <b>* {{book.title}}</b>
+      <b> | {{book.description}}</b>
+      <b> | {{book.price}}</b>  
+      <button class="button buttons" (click)="deleteBook(book.id)">Delete book</button> -->
+   </table>
+
+  </body>
+
+</html>
